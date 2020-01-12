@@ -1,7 +1,5 @@
 def cnn_model(x_ph, dropout_rate):
     ################################################################################ 
-    # Implement a CNN with the required structure and initialize all the variables:
-    # Arguments:
     # - x_ph: one-hot encoded DNA input data / placeholder of shape [?, 1, 101, 4]
     # - dropout_rate: dropout rate (1 - keep probability) of dropout layer
     # Return values:
@@ -18,9 +16,6 @@ def cnn_model(x_ph, dropout_rate):
     out_channels = 32
     fc_units = 64
     max_pool_stride = 2
-    ################################################################################
-    #                            BEGINNING OF YOUR CODE                            #
-    ################################################################################
     
     # one convolutional layer with 32 kernels (filters) of width 11 and height 1, 
     # step size of 1 and ReLU activation. The input should be padded so that the 
@@ -66,7 +61,4 @@ def cnn_model(x_ph, dropout_rate):
     # l2 regularized loss function
     weights = [w1, w2, w3]
 
-    ################################################################################
-    #                               END OF YOUR CODE                               #
-    ################################################################################
     return y_hat_op, z_op, weights
